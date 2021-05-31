@@ -1,0 +1,40 @@
+<div>
+    <div ng-click="showSelectFn($event)" class="_angularjs_multiple_select_chosen"
+         ng-class="{'_angularjs_multiple_select_disabled': disabled}">
+        <span ng-show="!checkedListObj.length" class="_angularjs_multiple_select_chosen_tips">请选择</span>
+        <div ng-show="checkedListObj.length" class="_angularjs_multiple_select_chosen_item">
+            <span class="_angularjs_multiple_select_chosen_item_label _angularjs_multiple_select_text-ellipsis"
+                  title="{{checkedListObj[0].multiple_select_label}}">
+                {{ checkedListObj[0].multiple_select_label }}
+            </span>
+            <i class="_angularjs_multiple_select_chosen_item_del" ng-click="del($event)"></i>
+        </div>
+        <div ng-show="checkedListObj.length > 1" class="_angularjs_multiple_select_chosen_item">
+            <span class="_angularjs_multiple_select_chosen_item_label">{{ checkedListObj.length - 1 }}+</span>
+        </div>
+    </div>
+
+    <div ng-show="showSelect" class="_angularjs_multiple_select_module">
+        <div ng-show="showSearch" class="_angularjs_multiple_select_module_search">
+            <input class="_angularjs_multiple_select_module_search_input"
+                   type="text" ng-model="searchStr" ng-change="searchFilter()"/>
+        </div>
+        <div class="_angularjs_multiple_select_module_list">
+            <ul class="_angularjs_multiple_select_module_list_ul">
+                <li ng-repeat="item in filterList track by $index"
+                    ng-class="{'_angularjs_multiple_select_checked':item.multiple_select_checked}"
+                    ng-click="checkItem(item,$event)"
+                    class="_angularjs_multiple_select_module_list_item">
+                        <span class="_angularjs_multiple_select_module_list_item_label _angularjs_multiple_select_text-ellipsis"
+                              title="{{item.multiple_select_label}}">
+                            {{item.multiple_select_label}}
+                        </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
