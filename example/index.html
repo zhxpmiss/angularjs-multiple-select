@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angularjs-multiple-select example</title>
+    <script src="./lib/angular.min.js"></script>
+
+    <script src="./lib/angularjs-multiple-select/index.js"></script>
+    <link rel="stylesheet" href="./lib/angularjs-multiple-select/index.css" type="text/css"/>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    <span>{{ label }}</span>
+
+    <hr/>
+
+    <div>
+        <multiple-select select-list="leaveTypeList" checked-list="selectedTypeList"
+                         key="value" label="name" search="true">
+        </multiple-select>
+
+    </div>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', ["multipleSelectModule"]);
+    app.controller('myCtrl', ["$scope", function ($scope) {
+
+        $scope.label = "angularjs-multiple-select example";
+
+        $scope.leaveTypeList = [
+            {
+                value: "001",
+                name: "example 1 name"
+            },
+            {
+                value: "002",
+                name: "example 2 name"
+            },
+            {
+                value: "003",
+                name: "example 3 long long long long long name"
+            },
+            {
+                value: "004",
+                name: "example 3 name"
+            },
+        ];
+
+        $scope.selectedTypeList = [];
+    }]);
+</script>
+
+</body>
+</html>

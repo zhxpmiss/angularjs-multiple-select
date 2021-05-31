@@ -1,4 +1,14 @@
 /*样式名称比较长，避免样式混乱重复*/
+
+._angularjs_multiple_select {
+    position: relative;
+}
+
+._angularjs_multiple_select ul {
+    padding: 0;
+    margin: 0;
+}
+
 ._angularjs_multiple_select_chosen {
     display: flex;
     flex-flow: row nowrap;
@@ -13,9 +23,9 @@
 }
 
 ._angularjs_multiple_select_chosen_tips {
-    line-height: 26px;
     font-size: 12px;
     margin-left: 10px;
+    color: #909399;
 }
 
 ._angularjs_multiple_select_chosen_item {
@@ -47,12 +57,14 @@
     content: "+";
     display: block;
     transform: rotate(45deg) translateX(1.5px);
+    font-style: normal;
 }
 
 
 ._angularjs_multiple_select_module {
     position: absolute;
-    width: auto;
+    left: 0;
+    right: 0;
     min-width: 166px;
     border: 1px solid #eae6d1;
     border-radius: 3px;
@@ -61,7 +73,6 @@
 }
 
 ._angularjs_multiple_select_module_search {
-    width: 100%;
     padding: 10px;
 }
 
@@ -74,7 +85,6 @@
 }
 
 ._angularjs_multiple_select_module_list {
-    width: 100%;
     padding: 0 0 10px 10px;
 }
 
@@ -112,6 +122,7 @@
     border-bottom: 2px solid #409eff;
     border-radius: 2px;
     transform: rotate(45deg);
+    font-style: normal;
 }
 
 ._angularjs_multiple_select_text-ellipsis {
