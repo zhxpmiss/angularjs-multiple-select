@@ -1,5 +1,5 @@
 (function () {
-    angular.module("multipleSelectModule", ['angular-bind-html-compile']).directive("multipleSelect", ["$rootScope", function ($rootScope) {
+    angular.module("multipleSelectModule", []).directive("multipleSelect", ["$rootScope", function ($rootScope) {
         return {
             restrict: "AE",
             templateUrl: "./index.html",
