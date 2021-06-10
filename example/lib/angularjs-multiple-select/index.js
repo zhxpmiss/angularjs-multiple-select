@@ -177,6 +177,8 @@
                     if (!(classReg.test(event.target.className))) {
                         $scope.$apply(function () {
                             $scope.showSelect = false;
+                            $scope.searchStr = "";
+                            $scope.searchFilter();
                         });
                     }
                 }
